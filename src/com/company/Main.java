@@ -1,22 +1,21 @@
 package com.company;
 
-public class Main <T> {
-
-    int [] int_arr =  {1,2,3,4,5,6};
-    char[] char_arr = {'a','b','c','d','f','e'};
- //метод, меняющий местами два элемента с указанными индексами в передаваемом массиве
- public T[] changeUnits (T[]my_arr, int index1, int index2){
-T unit1 = my_arr[index1];
-T unit2 = my_arr[index2];
-my_arr[index1]=unit2;
-my_arr[index2]=unit1;
-return my_arr;
- }
-
-
-    public  void main(String[] args) {
-
-        changeUnits(int_arr,0,5);
-        System.out.println(int_arr.toString());
+public class Main {
+    public static String [] str_arr = new String[] {"qaz","wsx","edc","rfv","tgb","yhn"};
+    public static Integer [] int_arr = new Integer[]{1,2,3,4,5,6};
+    public static Float [] fl_arr = new Float[] {0.0f,1.1f,2.2f,3.3f };
+    public static void main(String[] args) {
+////method takes String type
+        GenericClass str = new GenericClass<String[]>();
+        str.changeUnits(str_arr, 0, 5);
+////method takes Integer type
+        GenericClass in = new GenericClass<Integer[]>();
+        str.changeUnits(int_arr, 0, 5);
+////method takes Float type
+        GenericClass fl = new GenericClass<Float[]>();
+        fl.transformArrayToList(fl_arr);
+        for (int i = 0; i < in.transformArrayToList(fl_arr).size(); i++) {
+            System.out.print(in.transformArrayToList(fl_arr).get(i)+" ");
+        }
     }
 }
