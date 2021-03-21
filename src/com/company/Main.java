@@ -1,5 +1,8 @@
 package com.company;
 
+import fruit_store.Apple;
+import fruit_store.Fruit;
+
 public class Main {
     public static String [] str_arr = new String[] {"qaz","wsx","edc","rfv","tgb","yhn"};
     public static Integer [] int_arr = new Integer[]{1,2,3,4,5,6};
@@ -18,4 +21,5 @@ public class Main {
             System.out.print(in.transformArrayToList(fl_arr).get(i)+" ");
         }
     }
+
 }
